@@ -23,9 +23,7 @@ body {
     border-radius: 10px;
     display: flex;
     max-width: 620px;
-    /* растягивается на всю ширину */
     flex-grow: 1;
-    /* чтоб относительно нее выровнять кнопку */
     position: relative;
 }
 
@@ -115,6 +113,25 @@ body {
     max-width: 400px;
 }
 
+.slider-buttons {
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.slider-button {
+    cursor: pointer;
+}
+
+.swiper {
+    position: relative;
+}
+
 .slide-title {
     margin-top: 0;
     margin-bottom: 15px;
@@ -154,6 +171,18 @@ body {
 
 .slide-summer {
     background-image: url('../res/summer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-autumn {
+    background-image: url('../res/autumn.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-vitamin {
+    background-image: url('../res/vitamins.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -508,4 +537,64 @@ body {
 .social-link {
     margin-left: 20px;
     text-decoration: none;
+}
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+    .search-form {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .tabs-content {
+        flex-wrap: wrap;
+    }
+    .tabs-card {
+        flex: 50%;
+        min-width: clac(50% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 760px;
+    }
+    .slide {
+        padding: 70px;
+    }
+    .delivery-card {
+        width: clac(50% - 30px);
+    }
+    .footer-logo {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        min-width: 560px;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search-form {
+        order: 5;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .promo {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 95%;
+    }
+    .tabs-card {
+        max-width: 100%;
+    }
 }
